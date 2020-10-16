@@ -9,68 +9,88 @@
 </head>
 <body>
     
+<!-- All flash cards need to be in a container -->
+<div class="flash-card-container">
+
+    <!-- Each card needs it's own parent -->
     <div class="flash-card-parent">
-  
         <div class="flash-card-child">
             <div><img src="./images/Balasana1.png" alt="Balasana"></div>
             <div>Balasana</div>
         </div>
+    </div><!-- don't forget the closing tag -->
 
+    <div class="flash-card-parent">
         <div id="bharachair" class="flash-card-child">
             <div><img src="./images/Bharadavajasana-chair1.png" alt="Bhara"></div>
             <div>Bharadvajasana Chair</div>
         </div>
+    </div>
 
+    <div class="flash-card-parent">
         <div id="bhara" class="flash-card-child">
             <div><img src="./images/Bharadvajasana.png" alt="learn your poses!"></div>
             <div>Bharadvajasana</div>
         </div>
-
+    </div>
+    
+    <div class="flash-card-parent">
         <div id="garudasana" class="flash-card-child">
             <div><img src="./images/Garudasana1.png" alt="learn your poses!"></div>
             <div>Garudasana</div>
         </div>
+    </div>
 
+    <div class="flash-card-parent">
         <div id="half-moon" class="flash-card-child">
             <div><img src="./images/half-moon.png" alt="learn your poses!"></div>
             <div>Ardha Chandrasana</div>
         </div>
-
+    </div>
+    <div class="flash-card-parent">
         <div id="mari" class="flash-card-child">
             <div><img src="./images/Marichyasana-3.png" alt=" learn your poses!"></div>
             <div>Marichyasana</div>
         </div>
-
+    </div>
+    <div class="flash-card-parent">
         <div id="sarvangasana" class="flash-card-child">
             <div><img src="./images/salamba-sarvangasana.png" alt="learn your poses!"></div>
             <div>Salamba Sarvangasana</div>
         </div>
-
+    </div>
+    <div class="flash-card-parent">
         <div id="upavishta" class="flash-card-child">
             <div><img src="./images/upavishta-konasana.png" alt=" learn your poses!"></div>
             <div>Upavishta Konasana</div>
         </div>
-
+    </div>
+    <div class="flash-card-parent">
         <div id="urdhva" class="flash-card-child">
             <div><img src="./images/Urdhva-Mukha-Svanasana.png" alt=" learn your poses!"></div>
             <div>Urdva Mukha Svanasana</div>
         </div> 
-
+    </div>
      
 </div>
 
 <div id="go-to-next-page">
     <button id="next-page>">Next</button>
 </div>
+<script>
 
+    // add an event listener to the body element
+    document.body.addEventListener('click', function(e) {
+        console.log(e.target.closest('.flash-card-parent'))
+        // Get the closest element that has the class flash-card-parent
+        const flashCardParent = e.target.closest('.flash-card-parent')
+        // is the element clicked a flash-card-parent? 
+        if (flashCardParent) {
+            // if so lets's toggle the flipped class
+            flashCardParent.classList.toggle('flipped')
+        }
+    })
 
-
-
-
-
-
-
-
-
+</script>
 </body>
 </html>
