@@ -1,0 +1,40 @@
+
+/* .flash-card-parent {
+
+} */
+.flash-card-child {
+    width: 250px;
+    height: 250px;
+    background-color:tomato;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    position: relative;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transition: 400ms;
+    transform: perspective(400px) rotateY(0);
+}
+
+.flash-card-parent:hover > .flash-card-child {
+    transform: perspective(400px) rotateY(180deg);
+}
+
+.flash-card-child > div {
+    width: 250px;
+    height: 250px;
+    background-color:rgb(19, 95, 4);
+    text-align:center;
+    line-height:80px;
+    font-size: 22px;
+    position: absolute;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+
+}
+
+.flash-card-child > div:last-child {
+    transform: translateZ(-1px) rotateY(180deg);
+
+}    

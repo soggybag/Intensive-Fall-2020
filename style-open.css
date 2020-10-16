@@ -1,0 +1,19 @@
+#opening-page {
+    width: 100px;
+    height: 100px;
+    margin: 2rem;
+    background-color: tomato;
+        animation-name:spin;
+        animation-duration:5000ms;
+
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(90deg);
+    }
+}
+
